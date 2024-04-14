@@ -3,6 +3,10 @@ import { hideBin } from 'yargs/helpers';
 import { MagicCardCollection } from '../practica9/CardCollection.js';
 import { MagicCard, MagicColor, MagicType, MagicRarity } from '../practica9/Card.js';
 
+/**
+ * Configura y ejecuta los comandos del cliente.
+ * Utiliza `yargs` para definir comandos que permiten interactuar con las colecciones de cartas.
+ */
 const setupCommands = () => {
     yargs(hideBin(process.argv))
         .command({
@@ -19,6 +23,10 @@ const setupCommands = () => {
                 marketValue: { type: 'number', demandOption: true },
                 userName: { type: 'string', demandOption: true }
             },
+            /**
+             * Manejador para el comando 'add'. Crea y añade una nueva carta a la colección de un usuario.
+             * @param argv Argumentos recibidos desde la línea de comandos.
+             */
             handler(argv) {
                 const collection = new MagicCardCollection(argv.userName);
                 const newCard = new MagicCard(
@@ -40,6 +48,10 @@ const setupCommands = () => {
             builder: {
                 userName: { type: 'string', demandOption: true }
             },
+            /**
+             * Manejador para el comando 'list'. Lista todas las cartas en la colección de un usuario.
+             * @param argv Argumentos recibidos desde la línea de comandos.
+             */
             handler(argv) {
                 const collection = new MagicCardCollection(argv.userName);
                 console.log(collection.listCards());
@@ -59,6 +71,10 @@ const setupCommands = () => {
                 marketValue: { type: 'number', demandOption: true },
                 userName: { type: 'string', demandOption: true }
             },
+            /**
+             * Manejador para el comando 'update'. Actualiza una carta específica en la colección de un usuario.
+             * @param argv Argumentos recibidos desde la línea de comandos.
+             */
             handler(argv) {
                 const collection = new MagicCardCollection(argv.userName);
                 const updatedCard = new MagicCard(
@@ -81,6 +97,10 @@ const setupCommands = () => {
                 id: { type: 'number', demandOption: true },
                 userName: { type: 'string', demandOption: true }
             },
+            /**
+             * Manejador para el comando 'read'. Muestra los detalles de una carta específica de la colección de un usuario.
+             * @param argv Argumentos recibidos desde la línea de comandos.
+             */
             handler(argv) {
                 const collection = new MagicCardCollection(argv.userName);
                 console.log(collection.readCard(argv.id));
@@ -93,6 +113,10 @@ const setupCommands = () => {
                 id: { type: 'number', demandOption: true },
                 userName: { type: 'string', demandOption: true }
             },
+            /**
+             * Manejador para el comando 'remove'. Elimina una carta específica de la colección de un usuario.
+             * @param argv Argumentos recibidos desde la línea de comandos.
+             */
             handler(argv) {
                 const collection = new MagicCardCollection(argv.userName);
                 console.log(collection.deleteCard(argv.id));

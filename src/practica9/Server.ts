@@ -2,12 +2,18 @@ import net from 'net';
 import { MagicCardCollection } from '../practica9/CardCollection.js'; // Asegúrate de que esta ruta sea correcta y que MagicCardCollection esté correctamente exportado
 import { MagicCard } from '../practica9/Card.js'; // Asegúrate de que esta ruta sea correcta y que MagicCard esté correctamente exportado
 
+/**
+ * Interfaz para las solicitudes de tarjetas.
+ */
 interface CardRequest {
     action: string;
     card: MagicCard;
     userName: string;
 }
 
+/**
+ * Crea un servidor TCP para manejar las solicitudes de tarjetas.
+ */
 const server = net.createServer((socket) => {
     socket.on('data', async (data) => {
         const request: CardRequest = JSON.parse(data.toString());
@@ -42,7 +48,9 @@ const server = net.createServer((socket) => {
         socket.end();
     });
 });
-
+/**
+ * Escucha las conexiones en el puerto 2424.
+ */
 server.listen(2424, () => {
     console.log('Server is listening on port 2424');
 });
