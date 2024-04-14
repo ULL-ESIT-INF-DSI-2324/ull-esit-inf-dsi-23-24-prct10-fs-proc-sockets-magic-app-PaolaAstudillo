@@ -2,7 +2,7 @@ import "mocha";
 import { expect } from "chai";
 import { MagicCardCollection } from "../src/practica9/CardCollection.js";
 import { MagicCard, MagicColor, MagicType, MagicRarity } from "../src/practica9/Card.js";
-
+//no funciona
 describe("CardCollection tests", () => {
   let collection: MagicCardCollection;
   const user = "Paola";
