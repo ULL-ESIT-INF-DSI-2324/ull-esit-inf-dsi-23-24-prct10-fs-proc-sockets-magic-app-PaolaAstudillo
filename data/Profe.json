@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Black Lotus",
+    "manaCost": 35,
+    "color": "Blue",
+    "type": "Creature",
+    "rarity": "Rare",
+    "text": "Special Ability",
+    "marketValue": 100
+  }
+]

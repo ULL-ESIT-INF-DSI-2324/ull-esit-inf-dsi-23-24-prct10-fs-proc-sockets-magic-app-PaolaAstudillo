@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Magic Card",
+    "manaCost": 50,
+    "color": "White",
+    "type": "Creature",
+    "rarity": "Rare",
+    "text": "Rules of magic.",
+    "marketValue": 20
+  }
+]
