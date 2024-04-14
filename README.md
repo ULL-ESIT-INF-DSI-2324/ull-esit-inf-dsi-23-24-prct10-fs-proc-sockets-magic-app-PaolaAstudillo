@@ -35,13 +35,6 @@ En el lado del cliente, he utilizado `yargs` para manejar la interfaz de línea 
 Por último, para no utilizar el método `end`, espero a que el servidor procese la solicitud y responda, cerrando la conexión solo después de recibir esta respuesta. Esto garantiza que el cliente reciba y procese completamente la respuesta del servidor, evitando cortes prematuros que podrían llevar a pérdidas de datos importantes o a una mala experiencia de usuario.
 
 
-#### Conclusión
-El paso a una arquitectura cliente-servidor asincrónica ha sido fundamental para mejorar la escalabilidad y la eficiencia de la aplicación. A través del uso de tecnologías como Node.js, sockets, y la programación asíncrona, he logrado crear una aplicación robusta que permite a los usuarios gestionar sus colecciones de cart
-
-as Magic de forma efectiva, manteniendo al mismo tiempo una alta disponibilidad y rendimiento del sistema. Las lecciones aprendidas durante este proceso serán valiosas para futuros proyectos que requieran capacidades similares de manejo de datos y comunicación en red.
-
-
-node dist/practica9/Client.js add "Paola" 1 "Magic Card" 50 "Blue" "Creature" "Rare" "Special Ability" 100
 
 ### Ejercicio del PE 
 [Repositorio de la práctica](https://github.com/ULL-ESIT-INF-DSI-2324/ull-esit-inf-dsi-23-24-prct09-filesystem-magic-app-PaolaAstudillo)
